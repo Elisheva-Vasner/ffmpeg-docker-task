@@ -1,0 +1,5 @@
+FROM openjdk:17
+WORKDIR /user/src/app
+COPY . .
+RUN javac password_checker/My_password_checker.java
+CMD ["java", "password_checker.My_password_checker"]
