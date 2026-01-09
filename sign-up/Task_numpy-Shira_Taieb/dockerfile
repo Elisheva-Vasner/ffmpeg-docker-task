@@ -1,0 +1,11 @@
+
+FROM python:3.9-slim
+WORKDIR /app
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+COPY program.py .
+COPY img_color.png .
+COPY img_white.png .
+COPY img_black.png .
+EXPOSE 80
+CMD [ "python3","program.py" ]
